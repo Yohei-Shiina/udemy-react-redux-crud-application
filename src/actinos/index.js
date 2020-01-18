@@ -1,4 +1,4 @@
-// in redux, function that returns action is called action creater
+// in redux, function that returns action is called action creator
 
 // these two consts will be used for reducer as well
 export const INCREMENT = 'INCREMENT'
