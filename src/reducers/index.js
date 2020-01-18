@@ -2,6 +2,6 @@
 // import package to combine 
 import { combineReducers } from "redux"
 // this has the state to use in the application
-import count from './count'
+import events from './events'
 
-export default combineReducers({ count })
+export default combineReducers({ events })

@@ -1,15 +1,11 @@
-// in redux, function that returns action is called action creator
+import axios from 'axios'
 
-// these two consts will be used for reducer as well
-export const INCREMENT = 'INCREMENT'
-export const DECREMENT = 'DECREMENT'
+export const READ_EVENTS = 'READ_EVENTS'
 
-// action for increment
-export const increment = () => ({
-    type: INCREMENT
-})
+const ROOT_URL = 'https://udemy-utils.herokuapp.com/api/v1'
+const QUERYSTRING = '?token=token123'
 
-// decrement for increment
-export const decrement = () => ({
-    type: DECREMENT
-})
+export const readEvents = () => async dispatch => {
+  const response = await axios.get(`${ROOT_URL}/events/${QUERYSTRING}`)
+  dispatch({ type: READ_EVENTS, response })
+}
